@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Card -->
+
+    <div class="pad-size">
+        <div class="action-btns">
+            <!-- <button><i class="fal fa-print"></i> Print</button> -->
+            <button class="download-btn"><i class="fal fa-download"></i> Download</button>
+        </div>
+
+
+        <div class="card" id="card">
+            <img src="card-shape.png" class="card-shape" alt="">
+
+            <div class="card-container">
+                <div class="card-top">
+                    <h1>Ai Soft IT</h1>
+                    <!-- <img src="logo-white.png" alt=""> -->
+                </div>
+
+                <div class="profile-picture"
+                    style="background: url('e3f929f010fa37d02a4f55cd0280fd2f99d602f8.jpg'); background-size: cover; background-position: center;">
+                </div>
+
+                <div class="card-bottom">
+                    <h3>MD. ABDUR RAHMAN </h3>
+
+                    <div class="card-info-items card-info-items-first">
+                        <div class="card-info-item">
+                            <p>Registration ID:</p>
+                            <h5 class="registration-id">1000</h5>
+                        </div>
+
+                        <div class="card-info-item">
+                            <p>Member Type:</p>
+                            <h5>General Member</h5>
+                        </div>
+
+                        <div class="card-info-item">
+                            <p>Business Name:</p>
+                            <h5>AI Tech</h5>
+                        </div>
+
+                        <div class="card-info-item">
+                            <p>Email:</p>
+                            <h5>mmm.rahman77@gmail.com</h5>
+                        </div>
+
+                        <div class="card-info-item">
+                            <p>Mobile Number:</p>
+                            <a href="">01770991502</a>
+                        </div>
+
+                        <div class="card-info-item">
+                            <p>Blood Group:</p>
+                            <h5 class="blood-group">O+</h5>
+                        </div>
+
+                        <div class="card-info-item">
+                            <p>Address:</p>
+                            <h5>Khulna, Bagerhat Sadar</h5>
+                        </div>
+                    </div>
+
+                    <div class="responsibilities">
+                        <h5>Responsibilities</h5>
+
+                        <div class="responsibilities-wrapper">
+                            <p class="responsibility">Volunteer</p>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="social-link">
+                            <a href="https://www.facebook.com/robinkhasru" target="_BLANK"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <p>Connect</p>
+                        </div>
+
+                        <a class="website">AI Soft IT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="html2canvas.min.js"></script>
+    <!-- Custom Js -->
+    <script>
+
+        document.querySelector('.download-btn').addEventListener('click', function () {
+
+            html2canvas(document.querySelector('#card'), { scale: 10 }).then(canvas => {
+                const base64image = canvas.toDataURL('image/png');
+                var anchor = document.createElement('a');
+                anchor.setAttribute('href', base64image);
+                anchor.setAttribute('download', 'id-card.png');
+                anchor.click();
+                anchor.remove();
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>
